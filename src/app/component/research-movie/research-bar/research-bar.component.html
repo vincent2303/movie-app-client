@@ -1,0 +1,29 @@
+<div>
+  <label>research bar</label>
+  <form>
+    <input [(ngModel)]="this.researchRequest.title" name="title" >
+    <label>filter by genre</label>
+    <select [(ngModel)]="this.researchRequest.genreFilter" name="genre">
+      <option value="any">any genre</option>
+      <option  *ngFor="let genre of genres" value={{genre}}>{{genre}}</option>
+    </select>
+    <label>filter by average</label>
+    <select [(ngModel)]="this.researchRequest.minAverage" name="average">
+      <option value=0>none</option>
+      <option value=1>>1</option>
+      <option value=2>>2</option>
+      <option value=3>>3</option>
+      <option value=4>>4</option>
+    </select>
+    <label>filter by popularity</label>
+    <select [(ngModel)]="this.researchRequest.minRating" name="popularity">
+      <option value=0>none</option>
+      <option value=10>> 10 rating</option>
+      <option value=50>> 50 rating</option>
+      <option value=100>> 100 rating</option>
+      <option value=200>> 200 rating</option>
+    </select>
+    <button (click)="resetOptions()" >reset options</button>
+  </form>
+  <button (click)="find()" >find</button>
+</div>

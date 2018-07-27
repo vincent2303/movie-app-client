@@ -1,0 +1,9 @@
+<div>
+  <h2>movie finder</h2>
+  <app-research-bar></app-research-bar>
+  <ul *ngIf="this.myAccountService.movieFinded">
+    <li *ngFor="let movie of this.myAccountService.movieFinded">
+      <app-show-movie [movie]=movie ></app-show-movie>
+    </li>
+  </ul>
+</div>
