@@ -1,6 +1,8 @@
-<div>
+<div [class.hasBeenRated]="this.myAccountService.userRatingMap.has(movie.recId)" >
     <h4>{{movie.title}}</h4>
     <p>avg : {{movie.average}}</p>
     <p>based on {{movie.ratingNumber}} user's rate</p>
     <img src={{movie.url}} class="movieImg">
+    <input [(ngModel)]="newRating.rating" type="Number">
+    <button (click)="this.movieRating()" >ok</button>
 </div>

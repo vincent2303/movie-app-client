@@ -14,7 +14,8 @@ export class ResearchBarComponent implements OnInit {
     title: "",
     genreFilter: "any",
     minAverage: 0,
-    minRating: 0
+    minRating: 0,
+    skipedMovies: 0
   }
   private genres: String[] = genres
 
@@ -33,7 +34,8 @@ export class ResearchBarComponent implements OnInit {
       title: "",
       genreFilter: "any",
       minAverage: 0,
-      minRating: 0
+      minRating: 0,
+      skipedMovies: 0
     }
   }
 }

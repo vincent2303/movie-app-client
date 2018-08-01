@@ -1,0 +1,17 @@
+<div>
+  <span>
+    <h3>SelectedMovie</h3>
+    <p>title : {{movie.title}}</p>
+    <p>avg : {{movie.average}}</p>
+    <p>based on {{movie.ratingNumber}} user's rate</p>
+    <img src={{movie.url}} class="movieImg">
+  </span>
+  <span>
+    <h3>Correlated movies</h3>
+    <span *ngIf="this.correlatedMovies">
+      <p *ngFor="let movie of this.correlatedMovies">
+        {{movie.title}}
+      </p>
+    </span>
+  </span>
+</div>

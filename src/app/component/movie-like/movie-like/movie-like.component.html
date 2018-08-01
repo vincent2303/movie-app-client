@@ -1,0 +1,16 @@
+<div>
+  <h3>Movie Like</h3>
+  <span>
+    <input [(ngModel)]=titleSearch (keyup)="findMovie()">
+    <div class="container" *ngIf="this.movieFinded">
+      <div class="row">
+        <div class="col-sm-3" *ngFor="let movie of this.movieFinded">
+          <app-show-movie [movie]=movie (click)=selection(movie) ></app-show-movie>
+        </div>
+      </div>
+    </div>
+  </span>
+  <div *ngIf="this.selectedMovie">
+    <app-correlation-movies [movie]="this.selectedMovie"></app-correlation-movies>
+  </div>
+</div>

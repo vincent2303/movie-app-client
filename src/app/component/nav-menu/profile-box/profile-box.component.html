@@ -1,0 +1,6 @@
+<div *ngIf="this.myAccountService.user">
+  <img [src]=this.myAccountService.user.urlImage class="headerProfileImg" >
+  <p>{{this.myAccountService.user.name}}</p>
+  <p>{{this.myAccountService.user.email}}</p>
+  <button (click)="voir()" >ccc</button>
+</div>

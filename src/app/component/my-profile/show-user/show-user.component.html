@@ -1,0 +1,27 @@
+<div *ngIf="this.myAccountService.user">
+  <h3>You're profile</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <img [src]=this.myAccountService.user.urlImage class="headerProfileImg">
+        <span *ngIf="this.profileEdition">
+          <input [(ngModel)]="newUrl">
+          <button (click)="changeProfileImage()">change</button>
+        </span>
+      </div>
+      <div class="col-sm-8">
+        <p>name: {{this.myAccountService.user.name}}</p>
+        <p>email: {{this.myAccountService.user.email}}</p>
+        <span class="row">
+          <span class="col-sm-10"></span>
+          <span class="col-sm-1">
+            <button (click)="EditButton()" >
+              <p *ngIf="!this.profileEdition">Edit</p>
+              <p *ngIf="this.profileEdition">Close</p>
+            </button>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

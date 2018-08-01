@@ -1,9 +1,12 @@
 <div>
   <h2>movie finder</h2>
   <app-research-bar></app-research-bar>
-  <ul *ngIf="this.myAccountService.movieFinded">
-    <li *ngFor="let movie of this.myAccountService.movieFinded">
-      <app-show-movie [movie]=movie ></app-show-movie>
-    </li>
-  </ul>
+  <div *ngIf="this.myAccountService.movieFindedTable" class="container">
+    <div *ngFor="let row of this.myAccountService.movieFindedTable | paginate: { itemsPerPage: 5, currentPage: p }" class="row">
+      <div *ngFor="let movie of row" class="col-sm-3">
+        <app-show-movie [movie]=movie ></app-show-movie>
+      </div>
+    </div>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

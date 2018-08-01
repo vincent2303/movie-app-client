@@ -1,0 +1,26 @@
+<div>
+  <h3>login</h3>
+  <label>email</label>
+  <input [(ngModel)]="this.loginData.email" name="loginEmail">
+  <label>password</label>
+  <input [(ngModel)]="this.loginData.password" name="loginPassword">
+  <button (click)="login()" >login</button>
+  <h3>Register</h3>
+  <label>name</label>
+  <input [(ngModel)]="this.registerData.name" name="registerName">
+  <label>email</label>
+  <input [(ngModel)]="this.registerData.email" name="registerEmail">
+  <label>password</label>
+  <input [(ngModel)]="this.registerData.password" name="registerPassword">
+  <button (click)="register()">register</button>
+  <span *ngIf="sucessRegister">
+    {{sucessRegister}}
+  </span>
+  <br>
+  <span *ngIf="this.myAccountService.user">
+    <p>you are connected as {{this.myAccountService.user.name}}</p>
+  </span>
+  <br>
+  <h3>logout</h3>
+  <button (click)=logout() >logout</button>
+</div>

@@ -17,4 +17,6 @@ export const genres = [
     "Thriller",
     "War",
     "Western",
+    "IMAX"
     ]
+

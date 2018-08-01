@@ -1,0 +1,16 @@
+<nav>
+  <div class="row">
+    <div class="col-sm-3">
+      <app-profile-box *ngIf="this.myAccountService.user" ></app-profile-box>
+    </div>
+    <div class="col-sm-9">
+      <a routerLink="/connection">connection</a>
+      <a routerLink="/movieFinder">Movie finder</a>
+      <a routerLink="/movieLike">Movie like</a>
+      <a routerLink="/recommendation">Recommendation</a>
+      <a routerLink="/myProfile">My profile</a>
+      <a routerLink="/social">Social</a>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

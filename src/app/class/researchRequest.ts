@@ -3,4 +3,5 @@ export class ResearchRequest{
     genreFilter: String
     minAverage: Number
     minRating: Number
+    skipedMovies: Number
 }
